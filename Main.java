@@ -8,12 +8,21 @@ public class Main {
         switch (option) {
             case 1:
                 int n1 = scanner.nextInt();
-                int[] numbers = new int[n1];
+                int[] numbers1 = new int[n1];
                 for (int i = 0; i < n1; i++) {
-                    numbers[i] = scanner.nextInt();
+                    numbers1[i] = scanner.nextInt();
                 }
-                System.out.println(problem1(numbers));
+                System.out.println(problem1(numbers1));
                 break;
+            case 2:
+                int n2 = scanner.nextInt();
+                int[] numbers2 = new int[n2];
+                for (int i = 0; i < n2; i++ ){
+                    numbers2[i] = scanner.nextInt();
+                }
+                System.out.println(problem2(numbers2));
+                break;
+
         }
     }
     public static int problem1(int[] numbers){
@@ -24,5 +33,13 @@ public class Main {
             }
         }
         return min;
+    }
+    public static double problem2(int[] numbers){
+        int sum = 0;
+        for (int i = 0; i < numbers.length; i++) {
+            sum += numbers[i];
+        }
+
+        return (double) sum / numbers.length;
     }
     }
