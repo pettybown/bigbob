@@ -14,7 +14,6 @@ public class Main {
                 }
                 System.out.println(problem1(numbers));
                 break;
-            case 2:
         }
     }
     public static int problem1(int[] numbers){
