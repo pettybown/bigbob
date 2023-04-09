@@ -22,6 +22,11 @@ public class Main {
                 }
                 System.out.println(find_average(numbers2));
                 break;
+            case 3:
+                int n3 = scanner.nextInt();
+                System.out.println(check_prime_or_composite(n3));
+                break;
+
 
     }
     }
@@ -42,6 +47,20 @@ public class Main {
 
         return (double) sum / numbers.length;
     }
+    public static String check_prime_or_composite(int n){
+        int count = 0;
+        for(int i = 1; i <= n; i++){
+            if(n % i == 0){
+                count += 1;
+            }
+        }
+        if (count == 2){
+            return "Prime";
+        }
+        else {
+            return "Composite";
+        }
 
+    }
 
 }
