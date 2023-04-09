@@ -47,7 +47,10 @@ public class Main {
                 }
                 make_reverse_array(0, numbers7);
                 break;
-
+            case 8:
+                String s = scanner.next();
+                System.out.println(array(s));
+                break;
         }
     }
     public static int find_minimum(int[] numbers){
@@ -107,5 +110,28 @@ public class Main {
         make_reverse_array(n + 1, arr);
         System.out.print(arr[n] + " ");
     }
+    public static String check_is_num(String[] arr, int zero, int length) {
+        if (zero < length) {
+            if (checking(arr[zero])) {
+                return check_is_num(arr, ++zero, length);
+            }
+            else {
+                return "No";
+            }
+        }
+        return "Yes";
+    }
 
+    public static String array(String s) {
+        return check_is_num(s.split(""), 0, s.length());
+    }
+
+    public static boolean checking(String s) {
+        try {
+            Integer.parseInt(s);
+            return true;
+        } catch (NumberFormatException e) {
+            return false;
+        }
+    }
 }
