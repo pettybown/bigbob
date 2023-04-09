@@ -30,9 +30,11 @@ public class Main {
                 int n4 = scanner.nextInt();
                 System.out.println(find_factorial(n4));
                 break;
-
-
-    }
+            case 5:
+                int n5 = scanner.nextInt();
+                System.out.println(find_fibonacci_number(n5));
+                break;
+        }
     }
     public static int find_minimum(int[] numbers){
         int min = numbers[0];
@@ -72,6 +74,11 @@ public class Main {
         }
         return find_factorial(n - 1) * n;
     }
-
+    public static int find_fibonacci_number(int n){
+        if (n == 1 || n == 2){
+            return 1;
+        }
+        return find_fibonacci_number(n - 1) + find_fibonacci_number(n -2);
+    }
 
 }
