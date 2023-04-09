@@ -34,6 +34,11 @@ public class Main {
                 int n5 = scanner.nextInt();
                 System.out.println(find_fibonacci_number(n5));
                 break;
+            case 6:
+                int n6 = scanner.nextInt();
+                int k6 = scanner.nextInt();
+                System.out.println(find_pow(n6, k6));
+                break;
         }
     }
     public static int find_minimum(int[] numbers){
@@ -79,6 +84,12 @@ public class Main {
             return 1;
         }
         return find_fibonacci_number(n - 1) + find_fibonacci_number(n -2);
+    }
+    public static int find_pow(int a, int n){
+        if (n == 1){
+            return a;
+        }
+        return find_pow(a, n -1) * a;
     }
 
 }
