@@ -39,6 +39,15 @@ public class Main {
                 int k6 = scanner.nextInt();
                 System.out.println(find_pow(n6, k6));
                 break;
+            case 7:
+                int n7 = scanner.nextInt();
+                int[] numbers7 = new int[n7];
+                for (int i = 0; i < n7; i++ ){
+                    numbers7[i] = scanner.nextInt();
+                }
+                make_reverse_array(0, numbers7);
+                break;
+
         }
     }
     public static int find_minimum(int[] numbers){
@@ -90,6 +99,13 @@ public class Main {
             return a;
         }
         return find_pow(a, n -1) * a;
+    }
+    public static void make_reverse_array(int n, int[] arr) {
+        if (n == arr.length) {
+            return;
+        }
+        make_reverse_array(n + 1, arr);
+        System.out.print(arr[n] + " ");
     }
 
 }
