@@ -51,6 +51,11 @@ public class Main {
                 String s = scanner.next();
                 System.out.println(array(s));
                 break;
+            case 9:
+                int n = scanner.nextInt();
+                int k9 = scanner.nextInt();
+                System.out.println(find_binomial_coefficient(n, k9));
+                break;
         }
     }
     public static int find_minimum(int[] numbers){
@@ -133,5 +138,11 @@ public class Main {
         } catch (NumberFormatException e) {
             return false;
         }
+    }
+    public static int find_binomial_coefficient(int n, int k){
+        if (n == k || k == 0){
+            return 1;
+        }
+        return find_binomial_coefficient(n - 1, k - 1) + find_binomial_coefficient(n - 1, k);
     }
 }
