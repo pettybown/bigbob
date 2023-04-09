@@ -14,6 +14,14 @@ public class Main {
                 }
                 System.out.println(find_minimum(numbers1));
                 break;
+            case 2:
+                int n2 = scanner.nextInt();
+                int[] numbers2 = new int[n2];
+                for (int i = 0; i < n2; i++ ){
+                    numbers2[i] = scanner.nextInt();
+                }
+                System.out.println(find_average(numbers2));
+                break;
 
     }
     }
@@ -26,5 +34,14 @@ public class Main {
         }
         return min;
     }
+    public static double find_average(int[] numbers){
+        int sum = 0;
+        for (int i = 0; i < numbers.length; i++) {
+            sum += numbers[i];
+        }
+
+        return (double) sum / numbers.length;
+    }
+
 
 }
