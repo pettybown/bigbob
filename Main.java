@@ -28,7 +28,7 @@ public class Main {
                 break;
             case 4:
                 int n4 = scanner.nextInt();
-                System.out.println(factorial(n4));
+                System.out.println(find_factorial(n4));
                 break;
 
 
@@ -66,11 +66,12 @@ public class Main {
         }
 
     }
-    public static int factorial(int n){
+    public static int find_factorial(int n){
         if (n == 1){
             return 1;
         }
-        return factorial(n - 1) * n;
+        return find_factorial(n - 1) * n;
     }
+
 
 }
