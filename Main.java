@@ -26,6 +26,10 @@ public class Main {
                 int n3 = scanner.nextInt();
                 System.out.println(check_prime_or_composite(n3));
                 break;
+            case 4:
+                int n4 = scanner.nextInt();
+                System.out.println(factorial(n4));
+                break;
 
 
     }
@@ -61,6 +65,12 @@ public class Main {
             return "Composite";
         }
 
+    }
+    public static int factorial(int n){
+        if (n == 1){
+            return 1;
+        }
+        return factorial(n - 1) * n;
     }
 
 }
