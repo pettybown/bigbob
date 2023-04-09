@@ -56,6 +56,11 @@ public class Main {
                 int k9 = scanner.nextInt();
                 System.out.println(find_binomial_coefficient(n, k9));
                 break;
+            case 10:
+                int a10 = scanner.nextInt();
+                int b10 = scanner.nextInt();
+                System.out.println(find_GCD(a10,b10));
+                break;
         }
     }
     public static int find_minimum(int[] numbers){
@@ -144,5 +149,13 @@ public class Main {
             return 1;
         }
         return find_binomial_coefficient(n - 1, k - 1) + find_binomial_coefficient(n - 1, k);
+    }
+    public static int find_GCD(int a, int b) {
+        if (a % b == 0) {
+            return b;
+        } else if (b % a == 0) {
+            return a;
+        }
+        return find_GCD(a % b, b % a);
     }
 }
